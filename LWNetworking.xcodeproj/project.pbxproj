@@ -14,6 +14,9 @@
 		B3FB25181ADE09F0004DFA77 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B3FB25171ADE09F0004DFA77 /* Images.xcassets */; };
 		B3FB251B1ADE09F0004DFA77 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = B3FB25191ADE09F0004DFA77 /* LaunchScreen.xib */; };
 		B3FB25271ADE09F0004DFA77 /* LWNetworkingTests.m in Sources */ = {isa = PBXBuildFile; fileRef = B3FB25261ADE09F0004DFA77 /* LWNetworkingTests.m */; };
+		B3FB25331ADE0C64004DFA77 /* LWNetworking.m in Sources */ = {isa = PBXBuildFile; fileRef = B3FB25321ADE0C64004DFA77 /* LWNetworking.m */; };
+		B3FB253A1ADE11A0004DFA77 /* LWNetworkingAdditional.m in Sources */ = {isa = PBXBuildFile; fileRef = B3FB25391ADE11A0004DFA77 /* LWNetworkingAdditional.m */; };
+		E7FF1F30B72B3566A386C1EE /* libPods-LWNetworking.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D105C1F5C3AB50FA258B7828 /* libPods-LWNetworking.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -27,6 +30,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		9E2767FCFFA2FA472414A89D /* Pods-LWNetworking.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LWNetworking.debug.xcconfig"; path = "Pods/Target Support Files/Pods-LWNetworking/Pods-LWNetworking.debug.xcconfig"; sourceTree = "<group>"; };
+		A0335425B259EF25EE593A73 /* Pods-LWNetworking.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LWNetworking.release.xcconfig"; path = "Pods/Target Support Files/Pods-LWNetworking/Pods-LWNetworking.release.xcconfig"; sourceTree = "<group>"; };
 		B3FB25071ADE09F0004DFA77 /* LWNetworking.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LWNetworking.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B3FB250B1ADE09F0004DFA77 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B3FB250C1ADE09F0004DFA77 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -40,6 +45,11 @@
 		B3FB25201ADE09F0004DFA77 /* LWNetworkingTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LWNetworkingTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		B3FB25251ADE09F0004DFA77 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B3FB25261ADE09F0004DFA77 /* LWNetworkingTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LWNetworkingTests.m; sourceTree = "<group>"; };
+		B3FB25311ADE0C64004DFA77 /* LWNetworking.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LWNetworking.h; sourceTree = "<group>"; };
+		B3FB25321ADE0C64004DFA77 /* LWNetworking.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LWNetworking.m; sourceTree = "<group>"; };
+		B3FB25381ADE11A0004DFA77 /* LWNetworkingAdditional.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LWNetworkingAdditional.h; sourceTree = "<group>"; };
+		B3FB25391ADE11A0004DFA77 /* LWNetworkingAdditional.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LWNetworkingAdditional.m; sourceTree = "<group>"; };
+		D105C1F5C3AB50FA258B7828 /* libPods-LWNetworking.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-LWNetworking.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -47,6 +57,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E7FF1F30B72B3566A386C1EE /* libPods-LWNetworking.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -60,12 +71,22 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		05F0393560E3B19FA1625E32 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				D105C1F5C3AB50FA258B7828 /* libPods-LWNetworking.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		B3FB24FE1ADE09F0004DFA77 = {
 			isa = PBXGroup;
 			children = (
 				B3FB25091ADE09F0004DFA77 /* LWNetworking */,
 				B3FB25231ADE09F0004DFA77 /* LWNetworkingTests */,
 				B3FB25081ADE09F0004DFA77 /* Products */,
+				CEEED57AF778EAC85D81B636 /* Pods */,
+				05F0393560E3B19FA1625E32 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -88,6 +109,7 @@
 				B3FB25141ADE09F0004DFA77 /* Main.storyboard */,
 				B3FB25171ADE09F0004DFA77 /* Images.xcassets */,
 				B3FB25191ADE09F0004DFA77 /* LaunchScreen.xib */,
+				B3FB25301ADE0A0B004DFA77 /* Classes */,
 				B3FB250A1ADE09F0004DFA77 /* Supporting Files */,
 			);
 			path = LWNetworking;
@@ -119,6 +141,34 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		B3FB25301ADE0A0B004DFA77 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				B3FB25311ADE0C64004DFA77 /* LWNetworking.h */,
+				B3FB25321ADE0C64004DFA77 /* LWNetworking.m */,
+				B3FB25371ADE11A0004DFA77 /* Additional */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
+		B3FB25371ADE11A0004DFA77 /* Additional */ = {
+			isa = PBXGroup;
+			children = (
+				B3FB25381ADE11A0004DFA77 /* LWNetworkingAdditional.h */,
+				B3FB25391ADE11A0004DFA77 /* LWNetworkingAdditional.m */,
+			);
+			path = Additional;
+			sourceTree = "<group>";
+		};
+		CEEED57AF778EAC85D81B636 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				9E2767FCFFA2FA472414A89D /* Pods-LWNetworking.debug.xcconfig */,
+				A0335425B259EF25EE593A73 /* Pods-LWNetworking.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -126,9 +176,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = B3FB252A1ADE09F0004DFA77 /* Build configuration list for PBXNativeTarget "LWNetworking" */;
 			buildPhases = (
+				8E4E15DF0678B7E12790979A /* Check Pods Manifest.lock */,
 				B3FB25031ADE09F0004DFA77 /* Sources */,
 				B3FB25041ADE09F0004DFA77 /* Frameworks */,
 				B3FB25051ADE09F0004DFA77 /* Resources */,
+				61EC3E3CEF4F456A16EA03A5 /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -214,13 +266,48 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		61EC3E3CEF4F456A16EA03A5 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-LWNetworking/Pods-LWNetworking-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		8E4E15DF0678B7E12790979A /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		B3FB25031ADE09F0004DFA77 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B3FB25331ADE0C64004DFA77 /* LWNetworking.m in Sources */,
 				B3FB25131ADE09F0004DFA77 /* ViewController.m in Sources */,
 				B3FB25101ADE09F0004DFA77 /* AppDelegate.m in Sources */,
+				B3FB253A1ADE11A0004DFA77 /* LWNetworkingAdditional.m in Sources */,
 				B3FB250D1ADE09F0004DFA77 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -345,6 +432,7 @@
 		};
 		B3FB252B1ADE09F0004DFA77 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9E2767FCFFA2FA472414A89D /* Pods-LWNetworking.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = LWNetworking/Info.plist;
@@ -355,6 +443,7 @@
 		};
 		B3FB252C1ADE09F0004DFA77 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A0335425B259EF25EE593A73 /* Pods-LWNetworking.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = LWNetworking/Info.plist;
@@ -416,6 +505,7 @@
 				B3FB252C1ADE09F0004DFA77 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		B3FB252D1ADE09F0004DFA77 /* Build configuration list for PBXNativeTarget "LWNetworkingTests" */ = {
 			isa = XCConfigurationList;
@@ -424,6 +514,7 @@
 				B3FB252F1ADE09F0004DFA77 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
