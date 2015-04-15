@@ -41,17 +41,27 @@
 	return resultBlock;
 }
 
-- (void (^)(id responseObject, NSURL *filePath))validSuccessDownloadBlock:(void (^)(id downloadTask, id responseObject, NSURL *filePath))result {
-	void (^resultBlock)(id responseObject, NSURL *filePath)  = ^(id responseObject, NSURL *filePath) {
-		NSMutableDictionary *result = [NSMutableDictionary dictionaryWithDictionary:[self formatJSONRespone:responseObject]];
-		if ([result[@"code"] isEqualToString:@"200"]) {
-			return resultBlock(result[@"data"], filePath);
-		}else {
-			return resultBlock(result[@"msg"], filePath);
-		}
-	};
-	return resultBlock;
-}
+//- (void (^)(id responseObject, NSURL *filePath))validSuccessDownloadBlock:(void (^)(id downloadTask, id responseObject, NSURL *filePath))result {
+//	void (^resultBlock)(id, NSURL *) = ^(id responseObject, NSURL *filePath) {
+//		NSMutableDictionary *resultJson = [NSMutableDictionary dictionaryWithDictionary:[self formatJSONRespone:responseObject]];
+//		if ([resultJson[@"code"] isEqualToString:@"200"]) {
+//			return resultBlock(resultJson[@"data"], filePath);
+//		}else {
+//			return resultBlock(resultJson[@"msg"], filePath);
+//		}
+//	};
+//	
+//	
+////	void (^resultBlock)(id responseObject, NSURL *filePath)  = ^(id responseObject, NSURL *filePath) {
+////		NSMutableDictionary *result = [NSMutableDictionary dictionaryWithDictionary:[self formatJSONRespone:responseObject]];
+////		if ([result[@"code"] isEqualToString:@"200"]) {
+////			return resultBlock(result[@"data"], filePath);
+////		}else {
+////			return resultBlock(result[@"msg"], filePath);
+////		}
+////	};
+//	return resultBlock;
+//}
 
 - (NSDictionary *)formatJSONRespone:(id)responseObject {
 	if (![responseObject isKindOfClass:[NSDictionary class]]) {

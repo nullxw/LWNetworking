@@ -33,12 +33,12 @@
  */
 - (id (^)(id task, id responseObject))validSuccess:(id)result;
 
-/*!
- *  @brief  Download请求结果处理方法
- *
- *  @param success 处理完毕返回Block
- */
-- (void (^)(id responseObject, NSURL *filePath))validSuccessDownloadBlock:(void (^)(id downloadTask, id responseObject, NSURL *filePath))result;
+///*!
+// *  @brief  Download请求结果处理方法
+// *
+// *  @param success 处理完毕返回Block
+// */
+//- (void (^)(id responseObject, NSURL *filePath))validSuccessDownloadBlock:(void (^)(id downloadTask, id responseObject, NSURL *filePath))result;
 
 @end
 
