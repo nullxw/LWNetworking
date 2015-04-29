@@ -32,8 +32,7 @@
 	NSMutableDictionary *resultDic = [NSMutableDictionary dictionaryWithDictionary:[self formatJSONRespone:result]];
 	id (^resultBlock)(id task, id responseObject)  = ^(id task, id responseObject) {
 		if ([resultDic[@"code"] isEqualToString:@"200"]) {
-			//			return result[@"data"];
-			return result;
+			return result[@"data"];
 		}else {
 			return (id)[NSError errorWithDomain:serverDomain code:[result[@"code"] integerValue] userInfo:@{@"msg":result[@"msg"]}];
 		}
