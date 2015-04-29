@@ -72,6 +72,8 @@ static NSString * const AFNetworkingSingletonIdentifier = @"LWNetworkingSingleto
 				break;
 		}		
 	}];
+	
+	[[LWNetworkingAdditional sharedInstance] setupWithServerDomain:domain];
 }
 
 #pragma mark -
