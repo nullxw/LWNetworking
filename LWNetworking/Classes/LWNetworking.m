@@ -79,7 +79,7 @@ static NSString * const AFNetworkingSingletonIdentifier = @"LWNetworkingSingleto
 #pragma mark -
 
 - (void)GET:(NSString *)URLString parameters:(id)parameters success:(void (^)(NSURLSessionDataTask *task, id responseObject))success failure:(void (^)(NSURLSessionDataTask *task, NSError *error))failure {
-	if (![self checkReachability:failure]) {
+	if (![self checkReachability:failure] && _checkReachability) {
 		return;
 	}
 	[self.sessionManager GET:URLString parameters:parameters success:^(NSURLSessionDataTask *task, id responseObject) {
@@ -98,7 +98,7 @@ static NSString * const AFNetworkingSingletonIdentifier = @"LWNetworkingSingleto
 - (void)POST:(NSString *)URLString parameters:(id)parameters
 	 success:(void (^)(NSURLSessionDataTask *task, id responseObject))success
 	 failure:(void (^)(NSURLSessionDataTask *task, NSError *error))failure {
-	if (![self checkReachability:failure]) {
+	if (![self checkReachability:failure] && _checkReachability) {
 		return;
 	}
 	[self.sessionManager POST:URLString parameters:parameters success:^(NSURLSessionDataTask *task, id responseObject) {
@@ -122,6 +122,9 @@ static NSString * const AFNetworkingSingletonIdentifier = @"LWNetworkingSingleto
 	}
 }
 
+- (void)setCheckReachability:(BOOL)checkReachability {
+	_checkReachability = checkReachability;
+}
 
 - (BOOL)checkReachability:(void (^)(id task, NSError *error))failure  {
 	if (![self.sessionManager.reachabilityManager isReachable]) {
@@ -144,7 +147,7 @@ static NSString * const AFNetworkingSingletonIdentifier = @"LWNetworkingSingleto
 			 progress:(NSProgress * __autoreleasing *)progress
 			  success:(void (^)(NSURLSessionDataTask *task, id responseObject))success
 			  failure:(void (^)(NSURLSessionDataTask *task, NSError *error))failure {
-	if (![self checkReachability:failure]) {
+	if (![self checkReachability:failure] && _checkReachability) {
 		return;
 	}
 	
@@ -186,7 +189,7 @@ static NSString * const AFNetworkingSingletonIdentifier = @"LWNetworkingSingleto
 			 progress:(NSProgress * __autoreleasing *)progress
 			  success:(void (^)(NSURLSessionDataTask *task, id responseObject))success
 			  failure:(void (^)(NSURLSessionDataTask *task, NSError *error))failure {
-	if (![self checkReachability:failure]) {
+	if (![self checkReachability:failure] && _checkReachability) {
 		return;
 	}
 	[self.sessionManager POST:urlString parameters:parameters constructingBodyWithBlock:^(id<AFMultipartFormData> formData) {
@@ -213,7 +216,7 @@ static NSString * const AFNetworkingSingletonIdentifier = @"LWNetworkingSingleto
 				success:(void (^)(NSURLSessionDownloadTask *task, NSURLResponse *response, NSURL *filePath))success
 				failure:(void (^)(NSURLSessionDownloadTask *task, NSError *error))failure {
 	
-	if (![self checkReachability:failure]) {
+	if (![self checkReachability:failure] && _checkReachability) {
 		return;
 	}
 	urlString = [urlString stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
@@ -250,7 +253,7 @@ static NSString * const AFNetworkingSingletonIdentifier = @"LWNetworkingSingleto
 }
 - (void)DOWNLOADWithURL:(NSString *)urlString progress:(NSProgress *__autoreleasing *)progress destination:(NSURL *)URLPath success:(void (^)(NSURLSessionDownloadTask *, NSURLResponse *, NSURL *))success failure:(void (^)(NSURLSessionDownloadTask *, NSError *))failure{
 	
-	if (![self checkReachability:failure]) {
+	if (![self checkReachability:failure] && _checkReachability) {
 		return;
 	}
 	

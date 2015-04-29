@@ -19,6 +19,8 @@
  */
 + (instancetype)sharedInstance;
 
+@property (assign, nonatomic) BOOL checkReachability;
+
 /*!
  *  @author Megatron, 2015-04-15
  *
