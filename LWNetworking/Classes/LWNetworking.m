@@ -47,7 +47,7 @@ static NSString * const AFNetworkingSingletonIdentifier = @"LWNetworkingSingleto
 - (void)setupWithServerDomain:(NSString *)domain {
 	NSURLSessionConfiguration *sessionConfig = [NSURLSessionConfiguration defaultSessionConfiguration];
 	if ([NSURLSessionConfiguration resolveClassMethod:@selector(backgroundSessionConfigurationWithIdentifier:)]) {
-		sessionConfig = [NSURLSessionConfiguration backgroundSessionConfigurationWithIdentifier:@"TFNetworkingSingleton"];
+		sessionConfig = [NSURLSessionConfiguration backgroundSessionConfigurationWithIdentifier:@"LWNetworkingSingleton"];
 	}
 	self.sessionManager = [[AFHTTPSessionManager alloc] initWithBaseURL:[NSURL URLWithString:domain] sessionConfiguration:sessionConfig];
 	self.sessionManager.responseSerializer.acceptableContentTypes = [NSSet setWithObjects:@"application/json", @"text/json", @"text/javascript", @"text/html", nil];
