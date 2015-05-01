@@ -31,10 +31,11 @@
 - (id (^)(id task, id responseObject))validSuccess:(id)result {
 	NSMutableDictionary *resultDic = [NSMutableDictionary dictionaryWithDictionary:[self formatJSONRespone:result]];
 	id (^resultBlock)(id task, id responseObject)  = ^(id task, id responseObject) {
-		if ([resultDic[@"code"] isEqualToString:@"200"]) {
-			return result[@"data"];
+		if ([resultDic[self.jsonCodeParam] isEqualToString:self.jsonCodeSuccessValue]) {
+			return result[self.jsonDataParam];
 		}else {
-			return (id)[NSError errorWithDomain:serverDomain code:[result[@"code"] integerValue] userInfo:@{@"msg":result[@"msg"]}];
+            return (id)[NSError errorWithDomain:serverDomain code:[result[self.jsonCodeParam] integerValue] userInfo:@{self.jsonDataParam:result[self.jsonErrorMessageParam]}];
+			
 		}
 	};
 	return resultBlock;

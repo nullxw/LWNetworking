@@ -18,6 +18,35 @@
 + (instancetype)sharedInstance;
 
 /*!
+ *  @author 李巍, 2015-05-01
+ *
+ *  @brief  code
+ */
+@property (strong, nonatomic) NSString *jsonCodeParam;
+
+/*!
+ *  @author 李巍, 2015-05-01
+ *
+ *  @brief  success code value
+ */
+@property (strong, nonatomic) NSString *jsonCodeSuccessValue;
+
+/*!
+ *  @author 李巍, 2015-05-01
+ *
+ *  @brief  data
+ */
+@property (strong, nonatomic) NSString *jsonDataParam;
+
+/*!
+ *  @author 李巍, 2015-05-01
+ *
+ *  @brief  msg
+ */
+@property (strong, nonatomic) NSString *jsonErrorMessageParam;
+
+
+/*!
  *  @author Megatron, 2015-04-15
  *
  *  @brief  设置服务器地址
