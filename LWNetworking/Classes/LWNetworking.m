@@ -128,7 +128,7 @@ static NSString * const AFNetworkingSingletonIdentifier = @"LWNetworkingSingleto
 
 - (BOOL)checkReachability:(void (^)(id task, NSError *error))failure  {
 	if (![self.sessionManager.reachabilityManager isReachable]) {
-		NSError *error = [NSError errorWithDomain:[[self.sessionManager baseURL] absoluteString] code:NSURLErrorCannotConnectToHost userInfo:@{@"msg":NETWORK_NOT_REACHABLITY_PROMPT}];
+		NSError *error = [NSError errorWithDomain:[[self.sessionManager baseURL] absoluteString] code:NSURLErrorCannotConnectToHost userInfo:@{[LWNetworkingAdditional sharedInstance].jsonErrorMessageParam:NETWORK_NOT_REACHABLITY_PROMPT}];
 		if (failure) {
 			failure(nil, error);
 		}
@@ -300,7 +300,7 @@ static NSString * const AFNetworkingSingletonIdentifier = @"LWNetworkingSingleto
 	NSURLSessionConfiguration *config = [NSURLSessionConfiguration defaultSessionConfiguration];
 	AFURLSessionManager *manager = [[AFURLSessionManager alloc] initWithSessionConfiguration:config];
 	
-	NSString *urlString = @"http://60.28.60.29:89/upload/zbhdpicture/voice/2015/02/13/1956631baffd7c650093b3121bfe8315_20150213053150.amr";
+	NSString *urlString = @"";
 	urlString = [urlString stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
 	
 	NSURL *url = [NSURL URLWithString:urlString];

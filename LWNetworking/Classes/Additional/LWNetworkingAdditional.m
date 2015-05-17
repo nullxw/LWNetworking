@@ -34,7 +34,7 @@
 		if ([resultDic[self.jsonCodeParam] isEqualToString:self.jsonCodeSuccessValue]) {
 			return result[self.jsonDataParam];
 		}else {
-            return (id)[NSError errorWithDomain:serverDomain code:[result[self.jsonCodeParam] integerValue] userInfo:@{self.jsonDataParam:result[self.jsonErrorMessageParam]}];
+            return (id)[NSError errorWithDomain:serverDomain code:[result[self.jsonCodeParam] integerValue] userInfo:@{self.jsonErrorMessageParam:result[self.jsonErrorMessageParam]}];
 			
 		}
 	};
