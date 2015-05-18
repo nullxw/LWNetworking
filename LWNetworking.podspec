@@ -16,7 +16,7 @@ Pod::Spec.new do |s|
   #
 
   s.name         = "LWNetworking"
-  s.version      = "0.0.1"
+  s.version      = "0.0.2"
   s.summary      = "A test version of LWNetworking."
 
   s.description  = <<-DESC
@@ -78,8 +78,8 @@ Pod::Spec.new do |s|
   #  Supports git, hg, bzr, svn and HTTP.
   #
 
-  #s.source       = { :git => "https://github.com/lw254605953/LWNetworking.git", :tag => "0.0.2" }
-  s.source       = { :git => "/Users/LW/Desktop/项目/CocoaPods项目/LWNetworking/" }
+  s.source       = { :git => "https://github.com/lw254605953/LWNetworking.git", :tag => "0.0.2" }
+  #s.source       = { :git => "/Users/LW/Desktop/项目/CocoaPods项目/LWNetworking/" }
 
 
   # ――― Source Code ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
